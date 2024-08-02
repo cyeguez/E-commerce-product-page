@@ -1,50 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | E-commerce product page</title>
 
-  <main class="main-container">
-    <header class="header">
-      
-    </header>
-  </main>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main-container">
+      <header class="header">
+        <img src="./images/icon-menu.svg" alt="Menu Icon" />
+        <img src="./images/logo.svg" alt="Logo" />
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+        <nav class="navbar">
+          <ul class="navbar__links">
+            <li class="navbar__link"><a href="#"> Collections</a></li>
+            <li class="navbar__link"><a href="#">Men</a></li>
+            <li class="navbar__link"><a href="#"> Women</a></li>
+            <li class="navbar__link"><a href="#">About</a></li>
+            <li class="navbar__link"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
 
-  Sneaker Company
+        <!-- Inicio modal navbar -->
 
-  Fall Limited Edition Sneakers
+        <div class="modal-navbar__background">
+          <nav class="modal-navbar">
+            <img
+              src="./images/icon-close.svg"
+              alt="Close Icon"
+              class="modal-navbar__close"
+            />
+            <ul class="modal-navbar__links">
+              <li class="modal-navbar__link"><a href="#"> Collections</a></li>
+              <li class="modal-navbar__link"><a href="#">Men</a></li>
+              <li class="modal-navbar__link"><a href="#"> Women</a></li>
+              <li class="modal-navbar__link"><a href="#">About</a></li>
+              <li class="modal-navbar__link"><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Fin modal navbar -->
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+        <div class="header__cart-avatar">
+          <div class="header__cart">
+            <div class="header__cart--notification">3</div>
+            <img src="./images/icon-cart.svg" alt=" Cart Icon" />
+          </div>
+          <img src="./images/image-avatar.png" alt=" Avatar user" />
+        </div>
+      </header>
 
-  $125.00
-  50%
-  $250.00
+      <section class="content">
+        <article class="gallery">
+          <div class="gallery__image-container">
+            <img src="./images/icon-previous.svg" alt=" previus icon" />
+            <img src="./images/icon-next.svg" alt=" next icon" />
+          </div>
 
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <div class="gallery__thumbnails">
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="thumbnail"
+              id="1"
+              class="gallery__thumbnail"
+            />
+            <img
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="thumbnail"
+              id="2"
+              class="gallery__thumbnail"
+            />
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="thumbnail"
+              id="3"
+              class="gallery__thumbnail"
+            />
+            <img
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="thumbnail"
+              id="4"
+              class="gallery__thumbnail"
+            />
+          </div>
+        </article>
+      </section>
+    </main>
+
+    Sneaker Company Fall Limited Edition Sneakers These low-profile sneakers are
+    your perfect casual wear companion. Featuring a durable rubber outer sole,
+    they’ll withstand everything the weather can offer. $125.00 50% $250.00 0
+    Add to cart
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>
