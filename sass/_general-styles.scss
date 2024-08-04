@@ -1,0 +1,16 @@
+@use './var' ;
+
+body{
+  font-family: var.$font-kumnb-sans;
+}
+
+.main-container{
+  width: 375px;
+  border: 1px solid black;
+  margin: auto;
+  position: relative;
+
+  @media (min-width: 1115px){
+    width: 1115px;
+  }
+}

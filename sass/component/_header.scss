@@ -1,0 +1,101 @@
+@use "../var";
+.header {
+  height: 68px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 1115px) {
+    height: 112px;
+    border-bottom: 1px solid var.$Grayish-blue;
+  }
+
+  &__navigation {
+    width: 175px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__menu {
+      width: 16px;
+      height: 15px;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    &__logo {
+      width: 137px;
+      height: 20px;
+      
+    }
+
+    @media (min-width:1115px){
+      width: 600px;
+
+      &__menu{
+        display: none;
+      }
+    }
+  }
+
+  &__user {
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+
+    @media (min-width:1115px){
+      width: 125px;
+    }
+
+    &__cart{
+      position: relative;
+
+      &__icon {
+        width: 23px;
+        height: 23px;
+      }
+
+      &--notification{
+        width: 15px;
+        height: 12px;
+        border-radius: 16px;
+        background-color: var.$Orange;
+        position: absolute;
+        top: -2px;
+        right: -5px;
+        font-size: 0.6em;
+        text-align: center;
+        color: var.$White;
+        display: none;
+
+      }
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    &__avatar {
+      width: 25px;
+      border: 1px solid transparent;
+      
+
+      @media (min-width:1115px){
+        width: 48px;
+      }
+
+      &:hover{
+        cursor: pointer;
+        border: 2px solid var.$Orange;
+        border-radius: 50%;
+      }
+    }
+
+    
+  }
+}

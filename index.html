@@ -31,19 +31,25 @@
   <body>
     <main class="main-container">
       <header class="header">
-        <img src="./images/icon-menu.svg" alt="Menu Icon" />
-        <img src="./images/logo.svg" alt="Logo" />
+        <div class="header__navigation">
+          <img src="./images/icon-menu.svg" alt="Menu Icon" class="header__navigation__menu" />
+          <img src="./images/logo.svg" alt="Logo" class="header__navigation__logo" />
 
-        <nav class="navbar">
-          <ul class="navbar__links">
-            <li class="navbar__link"><a href="#"> Collections</a></li>
-            <li class="navbar__link"><a href="#">Men</a></li>
-            <li class="navbar__link"><a href="#"> Women</a></li>
-            <li class="navbar__link"><a href="#">About</a></li>
-            <li class="navbar__link"><a href="#">Contact</a></li>
-          </ul>
-        </nav>
 
+
+          <nav class="navbar">
+            <ul class="navbar__links">
+              <li class="navbar__link"><a href="#"> Collections</a></li>
+              <li class="navbar__link"><a href="#">Men</a></li>
+              <li class="navbar__link"><a href="#"> Women</a></li>
+              <li class="navbar__link"><a href="#">About</a></li>
+              <li class="navbar__link"><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+  
+        </div>
+
+       
         <!-- Inicio modal navbar -->
 
         <div class="modal-navbar__background">
@@ -64,12 +70,12 @@
         </div>
         <!-- Fin modal navbar -->
 
-        <div class="header__cart-avatar">
-          <div class="header__cart">
-            <div class="header__cart--notification">3</div>
-            <img src="./images/icon-cart.svg" alt=" Cart Icon" />
+        <div class="header__user">
+          <div class="header__user__cart">
+            <div class="header__user__cart--notification">3</div>
+            <img src="./images/icon-cart.svg" alt=" Cart Icon" class="header__user__cart__icon"/>
           </div>
-          <img src="./images/image-avatar.png" alt=" Avatar user" />
+          <img src="./images/image-avatar.png" alt=" Avatar user" class="header__user__avatar" />
         </div>
       </header>
 
