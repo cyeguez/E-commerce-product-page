@@ -1,9 +1,10 @@
 // Style general
 @forward './general-styles';
-
 @forward './component/header';
 @forward './component/navbar';
 @forward './component/modal-navbar';
+@forward './component/gallery';
+@forward './component/details';
 
 // Variables
 @use 'var.scss';
