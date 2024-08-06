@@ -12,8 +12,8 @@
       href="./images/favicon-32x32.png"
     />
     <!-- Reset -->
-     <link rel="stylesheet" href="./css/reset.css">
-     <!-- My styles -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <!-- My styles -->
     <link rel="stylesheet" href="./css/style.css" />
     <title>Frontend Mentor | E-commerce product page</title>
 
@@ -32,10 +32,16 @@
     <main class="main-container">
       <header class="header">
         <div class="header__navigation">
-          <img src="./images/icon-menu.svg" alt="Menu Icon" class="header__navigation__menu" />
-          <img src="./images/logo.svg" alt="Logo" class="header__navigation__logo" />
-
-
+          <img
+            src="./images/icon-menu.svg"
+            alt="Menu Icon"
+            class="header__navigation__menu"
+          />
+          <img
+            src="./images/logo.svg"
+            alt="Logo"
+            class="header__navigation__logo"
+          />
 
           <nav class="navbar">
             <ul class="navbar__links">
@@ -46,10 +52,8 @@
               <li class="navbar__link"><a href="#">Contact</a></li>
             </ul>
           </nav>
-  
         </div>
 
-       
         <!-- Inicio modal navbar -->
 
         <div class="modal-navbar__background">
@@ -73,17 +77,33 @@
         <div class="header__user">
           <div class="header__user__cart">
             <div class="header__user__cart--notification">3</div>
-            <img src="./images/icon-cart.svg" alt=" Cart Icon" class="header__user__cart__icon"/>
+            <img
+              src="./images/icon-cart.svg"
+              alt=" Cart Icon"
+              class="header__user__cart__icon"
+            />
           </div>
-          <img src="./images/image-avatar.png" alt=" Avatar user" class="header__user__avatar" />
+          <img
+            src="./images/image-avatar.png"
+            alt=" Avatar user"
+            class="header__user__avatar"
+          />
         </div>
       </header>
 
       <section class="content">
         <article class="gallery">
           <div class="gallery__image-container">
-            <img src="./images/icon-previous.svg" alt=" previus icon" class="gallery__image-container__previous" />
-            <img src="./images/icon-next.svg" alt=" next icon" class="gallery__image-container__next" />
+            <img
+              src="./images/icon-previous.svg"
+              alt=" previus icon"
+              class="gallery__image-container__previous"
+            />
+            <img
+              src="./images/icon-next.svg"
+              alt=" next icon"
+              class="gallery__image-container__next"
+            />
           </div>
 
           <div class="gallery__thumbnails">
@@ -124,18 +144,18 @@
           </p>
           <div class="details__prices">
             <p class="details__now">
-              $125.00 <span class="details__discount">50%</span>
+              $125.00 <span class="details__now--discount">50%</span>
             </p>
             <p class="details__before">$250.00</p>
           </div>
           <div class="details__product-quantity">
             <div class="input">
-              <img src="./images/icon-minus.svg" alt="Minus Icon" />
+              <img src="./images/icon-minus.svg" alt="Minus Icon" id="minus" />
               <input type="number" value="0" class="input__number" />
-              <img src="./images/icon-plus.svg" alt="Plus Icon" />
+              <img src="./images/icon-plus.svg" alt="Plus Icon" id="plus" />
             </div>
             <button class="details__button">
-              <img src="./images/icon-cart.svg" alt="" /> Add to cart
+              <img src="./images/icon-cart-black.svg" alt="" /> Add to cart
             </button>
           </div>
         </article>
@@ -143,16 +163,14 @@
 
       <!-- Inicio cart modal -->
       <div class="cart-modal">
-        <p class="cart-modal__title"></p>
+        <p class="cart-modal__title">Cart</p>
         <div class="cart-modal__checkout-container">
           <div class="cart-modal__detail-container">
-            <img
-              src="./images/image-product-1-thumbnail.jpg"
-              alt="Image product"
-            />
+            <img src="./images/image-product-1-thumbnail.jpg" alt="Product" class="cart-modal__img-product" />
             <div>
-              <p class="cart-modal__product">Autumn Limied Edition...</p>
-              <p class="cart-modal__pice">$12500x3 <span>$37500</span></p>
+              <p class="cart-modal__product">Fall Limited Edition Sneakers</p>
+              <p class="cart-modal__price">$12500x3 <span>$375.00</span></p>
+              
             </div>
             <img
               src="./images/icon-delete.svg"
@@ -160,7 +178,8 @@
               class="cart-modal__delete"
             />
           </div>
-          <button class="cart-moda__checkout">Checkout</button>
+          <p class="cart-modal__empty">Your cart is empty.</p>
+          <button class="cart-modal__checkout">Checkout</button>
         </div>
       </div>
       <!-- Fin cart modal -->

@@ -1,46 +1,103 @@
-@use '../var';
-@use '../mixins';
+@use "../var";
+@use "../mixins";
 
 .details {
-border: 1px solid red;
-padding: 24px;
+  border: 1px solid red;
+  padding: 24px;
 
-&__company{
-text-transform: uppercase;
-letter-spacing: 2px;
-font-weight: 700;
-color: var.$Dark-grayish-blue;
-font-style: .875rem;
-margin-bottom: 12px;
-}
-
-&__title{
-  font-size: 1.625rem;
-  margin-bottom: 16px;
-  font-weight: 700;
-}
-
-&__description{
-  font-size: .9375rem;
-   color: var.$Dark-grayish-blue;
-   line-height: 1.5rem;
-   margin-bottom: 24px;
-}
-
-&__prices{
-  border: 1px solid orange;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-&__now{
-  font-size: 1.375rem;
-  font-weight: 700;
-  
-}
-
-  img {
-    width: 12px;
+  &__company {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var.$Dark-grayish-blue;
+    font-style: 0.875rem;
+    margin-bottom: 12px;
   }
+
+  &__title {
+    font-size: 1.625rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+
+  &__description {
+    font-size: 0.9375rem;
+    color: var.$Dark-grayish-blue;
+    line-height: 1.5rem;
+    margin-bottom: 24px;
+  }
+
+  &__prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__now {
+    font-size: 1.375rem;
+    color: var.$Black;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+
+    &--discount {
+      background-color: var.$Black;
+      width: 53px;
+      color: var.$White;
+      font-size: 0.875rem;
+      padding: 4px;
+      border-radius: 7px;
+      margin-left: 1.125rem;
+      text-align: center;
+    }
+  }
+
+  &__before {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var.$Grayish-blue;
+    text-decoration: line-through;
+  }
+
+  &__product-quantity {
+    .input {
+      height: 55px;
+      padding-inline: 1.25rem;
+      margin-bottom: 1rem;
+      background-color: var.$Light-grayish-blue;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__number{
+        text-align: center;
+        font-size: .875rem;
+        font-weight: 700;
+        outline: none;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button{
+          -webkit-appearance: none;
+        }
+      }
+      img {
+        width: 12px;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__button{
+    @include mixins.button;
+
+    img{
+      width: 18px;
+    }
+
+  }
+
 }

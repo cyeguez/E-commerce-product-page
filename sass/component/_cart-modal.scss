@@ -1,0 +1,78 @@
+@use "../var";
+@use "../mixins";
+
+.cart-modal {
+  background-color: var.$White;
+  position: absolute;
+  top: 75px;
+  left: 8px;
+  right: 8px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+
+  &__title {
+    color: var.$Black;
+    font-weight: 700;
+    margin-bottom: 1.875rem;
+  }
+
+  &__checkout-container {
+    margin-inline: -24px;
+    border-top: 1px solid var.$Light-grayish-blue;
+    padding: 1.5rem;
+    
+  }
+
+  &__detail-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    
+  }
+
+  &__img-product {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  &__product {
+    color: var.$Grayish-blue;
+    font-weight: 500;
+  }
+
+  &__price {
+    color: var.$Grayish-blue;
+    font-weight: 500;
+
+    & span {
+      color: var.$Black;
+      font-weight: 700;
+    }
+  }
+
+  &__delete {
+    width: 1rem;
+  }
+
+  &__empty {
+    color: var.$Grayish-blue;
+    text-align: center;
+    font-weight: 700;
+    margin-block: 42px;
+    display: none;
+    
+  }
+
+  
+
+  &__checkout {
+    @include mixins.button;
+    margin-bottom: -1rem;
+  }
+}
