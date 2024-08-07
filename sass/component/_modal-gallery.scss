@@ -1,0 +1,11 @@
+@use '../var';
+@use '../mixins';
+
+.modal-gallery{
+  border: 1px solid red;
+
+  &__background{
+    @include mixins.modal-background(static);
+  }
+
+}

@@ -2,6 +2,8 @@
 @use "../mixins";
 
 .cart-modal {
+  width: 360;
+  height: 260px;
   background-color: var.$White;
   position: absolute;
   top: 75px;
@@ -11,6 +13,7 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: none;
+  
 
   &__title {
     color: var.$Black;

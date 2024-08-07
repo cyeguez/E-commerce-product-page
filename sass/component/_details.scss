@@ -2,7 +2,6 @@
 @use "../mixins";
 
 .details {
-  border: 1px solid red;
   padding: 24px;
 
   &__company {
@@ -71,33 +70,78 @@
       justify-content: space-between;
       align-items: center;
 
-      &__number{
+      &__number {
+        width: 100%;
         text-align: center;
-        font-size: .875rem;
+        font-size: 0.875rem;
         font-weight: 700;
         outline: none;
+        padding-inline: 12px;
 
         &::-webkit-inner-spin-button,
-        &::-webkit-outer-spin-button{
+        &::-webkit-outer-spin-button {
           -webkit-appearance: none;
         }
       }
       img {
         width: 12px;
-        &:hover{
+        &:hover {
           cursor: pointer;
         }
       }
     }
   }
 
-  &__button{
+  &__button {
     @include mixins.button;
 
-    img{
+    img {
       width: 18px;
     }
-
   }
 
+  @media (min-width: 1115px) {
+    width: 446px;
+    padding-top: 57px;
+
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 48px;
+    }
+
+    &__description {
+      font-size: 0.875rem;
+      margin-bottom: 30px;
+    }
+
+    &__prices {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    &__now {
+      margin-bottom: 1.3125rem;
+    }
+
+    &__product-quantity{
+      display: flex;
+      gap: 1rem;
+
+      .input{
+        width: 140px;
+        height: 51px;
+        
+      }
+      
+    }
+    &__button{
+      width: 244px;
+      height: 51px;
+
+      
+    }
+  }
 }
