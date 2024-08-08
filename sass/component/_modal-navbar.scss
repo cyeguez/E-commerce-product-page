@@ -2,7 +2,7 @@
 @use '../mixins';
 
 .modal-navbar-container{
-  @include mixins.modal-background(none);
+  @include mixins.modal-background(none);  //para mostrar aplicar un display: block
 }
 .modal-navbar{
   
