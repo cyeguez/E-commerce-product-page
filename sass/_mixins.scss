@@ -1,46 +1,65 @@
 @use "./var";
 
-@mixin modal-background($display){
+@mixin modal-background($display) {
   background-color: var.$Black-modal;
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  right: 0;
   z-index: 1;
   display: $display;
 }
 
-@mixin btn_arrows($direction, $value) {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background-color: var.$White;
-  padding: 12px;
-  border-radius: 50%;
-  top: calc(50% - 20px);
 
-  @if $direction == "right" {
-    right: $value;
-  } @else if $direction== "left" {
-    left: $value;
+
+@mixin button {
+  width: 100%;
+  background-color: var.$Orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-block: 20px;
+  border-radius: 10px;
+  color: var.$Black;
+  font-weight: 700;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
   }
 }
 
-@mixin button{
-  width: 100%;
-    background-color: var.$Orange;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding-block: 20px;
-    border-radius: 10px;
-    color: var.$Black;
-    font-weight: 700;
+@mixin button-arrow($size,$directionX, $value){
+  background-color: var.$White;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 30px);
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  
 
-    &:hover{
-      cursor:pointer;
-      opacity: .5;
+  &:hover{
+    border:1px solid var.$Orange;
+    cursor: pointer;
+
+    path{
+      stroke: var.$Orange;
     }
+  }
+  @if $directionX == "right" {
+    right: $value;
+  } @else if $directionX== "left" {
+    left: $value;
+  }
+
+  & svg{
+    width: auto;
+    
+  }
+
 }

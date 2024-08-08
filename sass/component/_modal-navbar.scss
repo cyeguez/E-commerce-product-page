@@ -1,11 +1,11 @@
 @use '../var';
 @use '../mixins';
 
+.modal-navbar-container{
+  @include mixins.modal-background(none);
+}
 .modal-navbar{
   
-  &__background{
-    @include mixins.modal-background(none);
-  }
 
   width: 250px;
   height: 100%;

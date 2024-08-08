@@ -13,14 +13,15 @@
     &:hover {
       cursor: pointer;
     }
-
-    &__next {
-      @include mixins.btn_arrows(right, 15px);
-    }
-    &__previous {
-      @include mixins.btn_arrows(left, 15px);
-    }
   }
+
+  &__container-previus {
+    @include mixins.button-arrow(42px,left, 15px);
+  }
+  &__container-next {
+    @include mixins.button-arrow(42px,right, 15px);
+  }
+ 
 
   &__thumbnails {
     display: none;
@@ -51,7 +52,7 @@
       width: 80px;
       border-radius: 10px;
 
-      &:hover{
+      &:hover {
         cursor: pointer;
         border: 1px solid var.$Orange;
       }

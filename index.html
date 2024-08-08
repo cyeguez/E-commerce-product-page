@@ -18,14 +18,7 @@
     <title>Frontend Mentor | E-commerce product page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
+    
     </style>
   </head>
   <body>
@@ -56,7 +49,7 @@
 
         <!-- Inicio modal navbar -->
 
-        <div class="modal-navbar__background">
+        <div class="modal-navbar-container">
           <nav class="modal-navbar">
             <img
               src="./images/icon-close.svg"
@@ -94,16 +87,28 @@
       <section class="content">
         <article class="gallery">
           <div class="gallery__image-container">
-            <img
-              src="./images/icon-previous.svg"
-              alt=" previus icon"
-              class="gallery__image-container__previous"
-            />
-            <img
-              src="./images/icon-next.svg"
-              alt=" next icon"
-              class="gallery__image-container__next"
-            />
+            <div class="gallery__container-previus">
+              <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 1 3 9l8 8"
+                  stroke="#1D2026"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="gallery__container-next">
+              <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m2 1 8 8-8 8"
+                  stroke="#1D2026"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
 
           <div class="gallery__thumbnails">
@@ -166,11 +171,14 @@
         <p class="cart-modal__title">Cart</p>
         <div class="cart-modal__checkout-container">
           <div class="cart-modal__detail-container">
-            <img src="./images/image-product-1-thumbnail.jpg" alt="Product" class="cart-modal__img-product" />
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="Product"
+              class="cart-modal__img-product"
+            />
             <div>
               <p class="cart-modal__product">Fall Limited Edition Sneakers</p>
               <p class="cart-modal__price">$12500x3 <span>$375.00</span></p>
-              
             </div>
             <img
               src="./images/icon-delete.svg"
@@ -186,24 +194,53 @@
 
       <!-- Inicio gallery modal -->
 
-      <div class="modal-gallery__background">
+      <div class="modal-gallery-container">
         <article class="modal-gallery">
-          <img
-            src="./images/icon-close.svg"
-            alt="Close Icon"
-            class="modal-gallery__close"
-          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="modal-gallery__close-modal"
+          >
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill="#69707D"
+              fill-rule="evenodd"
+            />
+          </svg>
+
           <div class="modal-gallery__image-container">
-            <img
-              src="./images/icon-previous.svg"
-              alt=" previus icon"
-              class="moda-gallery__previus"
-            />
-            <img
-              src="./images/icon-next.svg"
-              alt=" next icon"
-              class="modal-gallery__previus"
-            />
+            <div class="modal-gallery__container-previus">
+              <svg
+                width="20"
+                height="20"
+                xmlns="http://www.w3.org/2000/svg"
+                class="modal-gallery__previus"
+              >
+                <path
+                  d="M11 1 3 9l8 8"
+                  stroke="#000"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+
+            <div class="modal-gallery__container-next">
+              <svg
+                width="20"
+                height="20"
+                xmlns="http://www.w3.org/2000/svg"
+                class="modal-gallery__next"
+              >
+                <path
+                  d="m2 1 8 8-8 8"
+                  stroke="#000"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
 
           <div class="modal-gallery__thumbnails">
