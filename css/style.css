@@ -1,29 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
-body {
-  font-family: "Kumbh Sans";
-  font-style: normal;
-}
-
-.main-container {
-  width: 375px;
-  margin: auto;
-  position: relative;
-}
-@media (min-width: 1115px) {
-  .main-container {
-    width: 1115px;
-    min-height: 80vh;
-  }
-}
-
-@media (min-width: 1115px) {
-  .content {
-    display: flex;
-    padding: 90px 50px;
-    gap: 124px;
-  }
-}
-
 .header {
   height: 68px;
   padding: 0 24px;
@@ -445,6 +420,9 @@ body {
 .cart-modal__delete {
   width: 1rem;
 }
+.cart-modal__delete:hover {
+  cursor: pointer;
+}
 .cart-modal__empty {
   color: hsl(220, 14%, 75%);
   text-align: center;
@@ -468,6 +446,13 @@ body {
 .cart-modal__checkout:hover {
   cursor: pointer;
   opacity: 0.5;
+}
+@media (min-width: 115px) {
+  .cart-modal {
+    width: 365px;
+    top: 85px;
+    left: 68%;
+  }
 }
 
 .modal-gallery-container {
@@ -591,6 +576,35 @@ body {
   .attribution {
     font-size: 1rem;
   }
+}
+
+body {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+}
+
+.main-container {
+  width: 375px;
+  margin: auto;
+  position: relative;
+}
+@media (min-width: 1115px) {
+  .main-container {
+    width: 1115px;
+    min-height: 80vh;
+  }
+}
+
+@media (min-width: 1115px) {
+  .content {
+    display: flex;
+    padding: 90px 50px;
+    gap: 124px;
+  }
+}
+
+.show-block {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
