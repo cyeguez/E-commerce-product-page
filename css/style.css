@@ -218,7 +218,7 @@
     border-radius: 10px;
     background-position-y: 0px;
   }
-  .gallery__image-container__next, .gallery__image-container__previous {
+  .gallery__container-previus, .gallery__container-next {
     display: none;
   }
   .gallery__thumbnails {

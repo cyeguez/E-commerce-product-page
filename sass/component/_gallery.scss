@@ -10,9 +10,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: -35px;
-    &:hover {
+    &:hover{
       cursor: pointer;
     }
+    
   }
 
   &__container-previus {
@@ -37,10 +38,11 @@
       border-radius: 10px;
       background-position-y: 0px;
 
-      &__next,
-      &__previous {
-        display: none;
-      }
+      
+    }
+
+    &__container-previus, &__container-next{
+      display: none;
     }
 
     &__thumbnails {

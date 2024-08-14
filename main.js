@@ -19,6 +19,11 @@ const btnClose = document.querySelector(".modal-navbar__close");
 const btnPrevious = document.querySelector(".gallery__container-previus");
 const btnNext = document.querySelector(".gallery__container-next");
 const galleryContainer = document.querySelector(".gallery__image-container");
+const galleryThumbnails = document.querySelector(".gallery__thumbnails");
+const modalGalleryContainer = document.querySelector(
+  ".modal-gallery-container"
+);
+let modalGalleryImg = document.querySelector(".modal-gallery__image-container"); //
 
 let itemCount = 0;
 
@@ -50,8 +55,8 @@ const clearCartContent = () => {
   cartEmpty.style.display = "block";
 };
 
-// Función que me muestra el los elementos del carrito
-const showmeCart = () => {
+// Función que me muestra  los elementos del carrito
+const showMeCart = () => {
   contentCart.style.display = "flex";
   chekOutBtn.style.display = "block";
   cartNotification.innerText = itemCount;
@@ -66,7 +71,7 @@ addBtnCart.addEventListener("click", () => {
     cartNotification.innerText = itemCount;
     cartNotification.style.display = "block";
     inputNumber.value = 0;
-    showmeCart();
+    showMeCart();
     calculatePrice(itemCount);
   }
 });
@@ -103,7 +108,7 @@ btnClose.addEventListener("click", () => {
   navMobile.classList.remove("show-block");
 });
 
-// Funcioón encargada de cambiar las imagenes al presionar el botón hacia adelante
+// Función encargada de cambiar las imagenes al presionar el botón hacia adelante
 let imgIndex = 1;
 function changeNextImage(imageContainer) {
   if (imgIndex == 4) {
@@ -116,7 +121,7 @@ function changeNextImage(imageContainer) {
 
 function changePreviousImage(imageContainer) {
   if (imgIndex == 1) {
-    imgIndex =4;
+    imgIndex = 4;
   } else {
     imgIndex--;
   }
@@ -129,4 +134,59 @@ btnNext.addEventListener("click", () => {
 
 btnPrevious.addEventListener("click", () => {
   changePreviousImage(galleryContainer);
+});
+
+function showMeGalleryModal(id, element) {
+  element.style.backgroundImage = `url("../../images/image-product-${id}-thumbnail.jpg")`;
+  
+}
+
+
+
+
+
+// Activando la vista del producto en grande al darle click a la gallery
+galleryContainer.addEventListener("click", () => {
+  modalGalleryContainer.style.display = "grid";
+  console.log(modalGalleryContainer.id)
+  showMeGalleryModal(idImage, modalGalleryImg); //Me traigo el id de la miniatura y el nombre del contenedor para mostrar al darle click
+
+});
+
+// Activando la vista del producto en grande al darle click a la galleryThumbnails
+let thumbnails = galleryThumbnails.querySelectorAll("img");
+let idImage=1;
+thumbnails.forEach((thumbnail) => {
+  thumbnail.addEventListener("click", () => {
+     idImage= thumbnail.id;
+    showMeGalleryModal(idImage, galleryContainer);
+    
+
+    
+    
+
+    
+  });
+});
+
+// Activando las flechas de adelante o hacia atras en el modal Galerry
+
+const btnArrowNext = document.querySelector(".modal-gallery__container-next");
+const btnArrowPrevious = document.querySelector(
+  ".modal-gallery__container-previus"
+);
+
+btnArrowNext.addEventListener("click", () => {
+  changeNextImage(modalGalleryImg);
+});
+btnArrowPrevious.addEventListener("click", () => {
+  changePreviousImage(modalGalleryImg);
+});
+
+// Activando el botón close de modal gallery
+
+const closModalGallery = document.querySelector(".modal-gallery__close-modal");
+
+closModalGallery.addEventListener("click", () => {
+  modalGalleryContainer.style.display = "none";
 });
