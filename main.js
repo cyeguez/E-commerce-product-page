@@ -125,7 +125,7 @@ function changePreviousImage(imageContainer) {
   } else {
     imgIndex--;
   }
-  imageContainer.style.backgroundImage = `url("./images/image-product-${imgIndex}.jpg"`;
+  imageContainer.style.backgroundImage = `url("../images/image-product-${imgIndex}.jpg"`;
 }
 
 btnNext.addEventListener("click", () => {
@@ -137,7 +137,7 @@ btnPrevious.addEventListener("click", () => {
 });
 
 function showMeGalleryModal(id, element) {
-  element.style.backgroundImage = `url("./images/image-product-${id}-thumbnail.jpg")`;
+  element.style.backgroundImage = `url("../images/image-product-${id}-thumbnail.jpg")`;
   
 }
 
