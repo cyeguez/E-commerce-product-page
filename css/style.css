@@ -447,7 +447,7 @@
   cursor: pointer;
   opacity: 0.5;
 }
-@media (min-width: 115px) {
+@media (min-width: 1115px) {
   .cart-modal {
     width: 365px;
     top: 85px;
@@ -595,6 +595,9 @@ body {
   }
 }
 
+.content {
+  position: relative;
+}
 @media (min-width: 1115px) {
   .content {
     display: flex;

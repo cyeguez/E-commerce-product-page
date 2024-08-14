@@ -116,7 +116,7 @@ function changeNextImage(imageContainer) {
   } else {
     imgIndex++;
   }
-  imageContainer.style.backgroundImage = `url("../images/image-product-${imgIndex}.jpg"`;
+  changeBackgroud(imgIndex, imageContainer, "product");
 }
 
 function changePreviousImage(imageContainer) {
@@ -125,7 +125,7 @@ function changePreviousImage(imageContainer) {
   } else {
     imgIndex--;
   }
-  imageContainer.style.backgroundImage = `url("../images/image-product-${imgIndex}.jpg"`;
+  changeBackgroud(imgIndex, imageContainer, "product");
 }
 
 btnNext.addEventListener("click", () => {
@@ -136,36 +136,25 @@ btnPrevious.addEventListener("click", () => {
   changePreviousImage(galleryContainer);
 });
 
-function showMeGalleryModal(id, element) {
-  element.style.backgroundImage = `url("../images/image-product-${id}-thumbnail.jpg")`;
-  
+function changeBackgroud(id, element, article) {
+  let direction = "";
+
+  if (article == "product") {
+    direction = `url("../images/image-product-${imgIndex}.jpg"`;
+  } else if (article == "thumbnail") {
+    direction = `url("../images/image-product-${id}-thumbnail.jpg")`;
+  }
+
+  element.style.backgroundImage = direction;
 }
-
-
-
-
-
-// Activando la vista del producto en grande al darle click a la gallery
-galleryContainer.addEventListener("click", () => {
-  modalGalleryContainer.style.display = "grid";
-  console.log(modalGalleryContainer.id)
-  showMeGalleryModal(idImage, modalGalleryImg); //Me traigo el id de la miniatura y el nombre del contenedor para mostrar al darle click
-
-});
 
 // Activando la vista del producto en grande al darle click a la galleryThumbnails
 let thumbnails = galleryThumbnails.querySelectorAll("img");
-let idImage=1;
+let idImage = 1;
 thumbnails.forEach((thumbnail) => {
   thumbnail.addEventListener("click", () => {
-     idImage= thumbnail.id;
-    showMeGalleryModal(idImage, galleryContainer);
-    
-
-    
-    
-
-    
+    idImage = thumbnail.id;
+    changeBackgroud(idImage, galleryContainer, "thumbnail");
   });
 });
 
@@ -183,10 +172,33 @@ btnArrowPrevious.addEventListener("click", () => {
   changePreviousImage(modalGalleryImg);
 });
 
+// Detectar el tamaño de la ventana para evitar que se active en modo mobile
+
+window.addEventListener("resize", () => {
+  let windowWidth = window.innerWidth;
+  console.log(windowWidth);
+
+  if (windowWidth >= 1115) {
+    // Remover si existe un evento duplicado
+    galleryContainer.removeEventListener("click", openModal);
+
+    // Agregar el evento
+    galleryContainer.addEventListener("click", openModal);
+  } else {
+    galleryContainer.removeEventListener("click", openModal);
+  }
+});
+
+//Me traigo el id de la miniatura y el nombre del contenedor para mostrar al darle click
+function openModal() {
+  modalGalleryContainer.style.display = "grid";
+  changeBackgroud(idImage, modalGalleryImg, "thumbnail");
+}
+
 // Activando el botón close de modal gallery
 
-const closModalGallery = document.querySelector(".modal-gallery__close-modal");
+const closeModalGallery = document.querySelector(".modal-gallery__close-modal");
 
-closModalGallery.addEventListener("click", () => {
+closeModalGallery.addEventListener("click", () => {
   modalGalleryContainer.style.display = "none";
 });
