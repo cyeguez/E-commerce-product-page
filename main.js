@@ -140,9 +140,9 @@ function changeBackgroud(id, element, article) {
   let direction = "";
 
   if (article == "product") {
-    direction = `url("../images/image-product-${imgIndex}.jpg"`;
+    direction = `url("./images/image-product-${imgIndex}.jpg"`;
   } else if (article == "thumbnail") {
-    direction = `url("../images/image-product-${id}-thumbnail.jpg")`;
+    direction = `url("./images/image-product-${id}-thumbnail.jpg")`;
   }
 
   element.style.backgroundImage = direction;
