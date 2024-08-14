@@ -157,9 +157,6 @@
   background-size: cover;
   background-position-y: -35px;
 }
-.gallery__image-container:hover {
-  cursor: pointer;
-}
 .gallery__container-previus {
   background-color: hsl(0, 0%, 100%);
   width: 42px;
@@ -217,6 +214,9 @@
     margin-bottom: 30px;
     border-radius: 10px;
     background-position-y: 0px;
+  }
+  .gallery__image-container:hover {
+    cursor: pointer;
   }
   .gallery__container-previus, .gallery__container-next {
     display: none;
