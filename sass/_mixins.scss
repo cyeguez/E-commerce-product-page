@@ -11,8 +11,6 @@
   display: $display;
 }
 
-
-
 @mixin button {
   width: 100%;
   background-color: var.$Orange;
@@ -31,7 +29,7 @@
   }
 }
 
-@mixin button-arrow($size,$directionX, $value){
+@mixin button-arrow($size, $directionX, $value) {
   background-color: var.$White;
   width: $size;
   height: $size;
@@ -40,15 +38,13 @@
   top: calc(50% - 30px);
   display: flex;
   align-items: center;
-  justify-content: center; 
-  
-  
+  justify-content: center;
 
-  &:hover{
-    border:1px solid var.$Orange;
+  &:hover {
+    border: 1px solid var.$Orange;
     cursor: pointer;
 
-    path{
+    path {
       stroke: var.$Orange;
     }
   }
@@ -58,9 +54,7 @@
     left: $value;
   }
 
-  & svg{
+  & svg {
     width: auto;
-    
   }
-
 }
