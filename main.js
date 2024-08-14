@@ -174,20 +174,15 @@ btnArrowPrevious.addEventListener("click", () => {
 
 // Detectar el tamaño de la ventana para evitar que se active en modo mobile
 
-window.addEventListener("resize", () => {
-  let windowWidth = window.innerWidth;
-  console.log(windowWidth);
+let windowWidth = screen.width;
 
-  if (windowWidth >= 1115) {
-    // Remover si existe un evento duplicado
-    galleryContainer.removeEventListener("click", openModal);
+if (windowWidth >= 1115) {
+  // Remover si existe un evento duplicado
+  galleryContainer.removeEventListener("click", openModal);
 
-    // Agregar el evento
-    galleryContainer.addEventListener("click", openModal);
-  } else {
-    galleryContainer.removeEventListener("click", openModal);
-  }
-});
+  // Agregar el evento
+  galleryContainer.addEventListener("click", openModal);
+} 
 
 //Me traigo el id de la miniatura y el nombre del contenedor para mostrar al darle click
 function openModal() {
@@ -197,8 +192,11 @@ function openModal() {
 
 // Activando el botón close de modal gallery
 
-const closeModalGallery = document.querySelector(".modal-gallery__close-modal");
+const iconClose = document.querySelector(".modal-gallery__close-modal");
 
-closeModalGallery.addEventListener("click", () => {
+iconClose.addEventListener("click", closeModal)
+
+function closeModal() {
   modalGalleryContainer.style.display = "none";
-});
+
+}
